@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munira Al-Abyadh | Portfolio</title>
+    
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ink: #172b4d;
+            --muted: #64748b;
+            --blue: #2563eb;
+            --teal: #14b8a6;
+            --soft-bg: #f4f7fb;
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 76px;
+        }
+        body {
+            color: var(--ink);
+            background: #fff;
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            line-height: 1.7;
+        }
+        header {
+            min-height: clamp(520px, 78vh, 760px);
+            padding: 100px 1.25rem 60px;
+            color: #fff;
+            background:
+                linear-gradient(115deg, rgba(10, 25, 48, .88), rgba(11, 60, 78, .52)),
+                url('https://t3.ftcdn.net/jpg/04/57/93/78/360_F_457937822_6guyVRMr4cCdCr36zPg7Er7WRaf0FbSn.jpg') center/cover no-repeat;
+        }
+        header h1 {
+            max-width: 900px;
+            margin: 0 auto;
+            text-shadow: 0 3px 20px rgba(0, 0, 0, .22);
+        }
+        header .lead {
+            color: rgba(255, 255, 255, .88);
+        }
+        .navbar {
+            background: rgba(15, 35, 62, .96) !important;
+            box-shadow: 0 4px 18px rgba(15, 35, 62, .15);
+            backdrop-filter: blur(12px);
+        }
+        .my-brand {
+            font-weight: bold;
+            letter-spacing: .4px;
+            font-size: 22px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .navbar .nav-link {
+            color: rgba(255, 255, 255, .82);
+            font-weight: 500;
+            transition: color .2s ease;
+        }
+        .navbar .nav-link:hover,
+        .navbar .nav-link:focus {
+            color: #5eead4;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: clamp(28px, 4vw, 36px);
+            margin-bottom: 32px;
+            text-align: center;
+            letter-spacing: -.5px;
+        }
+        #about p {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+        #skills {
+            background: var(--soft-bg) !important;
+        }
+        .skill-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .progress {
+            height: 12px;
+            overflow: hidden;
+            border-radius: 999px;
+            background: #e2e8f0;
+        }
+        .progress-bar {
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--blue), var(--teal));
+        }
+        .project-card {
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid #e8edf4;
+            border-radius: 16px;
+            transition: transform .22s ease, box-shadow .22s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(23, 43, 77, .12) !important;
+        }
+        .project-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: var(--soft-bg);
+        }
+        .project-logo {
+            object-fit: contain;
+            padding: 18px;
+        }
+        .project-card .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 22px;
+        }
+        .project-card .card-title {
+            font-weight: 700;
+        }
+        .project-card .card-text {
+            color: var(--muted);
+        }
+        .btn-primary {
+            border-color: var(--blue);
+            border-radius: 9px;
+            background: var(--blue);
+            font-weight: 600;
+        }
+        .btn-primary:hover,
+        .btn-primary:focus {
+            border-color: #1d4ed8;
+            background: #1d4ed8;
+        }
+        .contact-form {
+            padding: 28px;
+            border: 1px solid #e8edf4;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 12px 30px rgba(23, 43, 77, .07);
+        }
+        .contact-form .form-control {
+            padding: 12px 14px;
+            border-color: #dbe3ee;
+            border-radius: 9px;
+        }
+        .contact-form .form-control:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 .2rem rgba(37, 99, 235, .14);
+        }
+        footer {
+            background: #0f233e;
+            color: rgba(255, 255, 255, .82);
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *,
+            *::before,
+            *::after {
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<!-- navbar-expand-lg: uitklappen op grote schermen en inklappen tot een hamburger-menu op kleinere schermen -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container"> <!-- Layout-container: blijft binnen de container -->
+        <a class="my-brand" href="#top">Munira.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Navigatie openen of sluiten"> <!--Hamburger button en zorg dat het blijft in de navbar-->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navMenu"> <!-- nodig voor een responsief menu; ms-auto duwt het menu naar rechts -->
+            <ul class="navbar-nav ms-auto">
+                 <!--needed for menu links-->
+                <li class="nav-item"><a class="nav-link" href="#about">Over</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Vaardigheden</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projecten</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->     <!-- https://getbootstrap.com/docs/5.3/utilities/flex/-->
+                    <!--https://getbootstrap.com/docs/5.3/utilities/text/-->  <!--https://getbootstrap.com/docs/5.3/content/typography/   display-3-->
+<header id="top" class="d-flex align-items-center justify-content-center text-center">
+    <div>
+        <h1 class="display-3 fw-bold">Hoi, ik ben Munira Al-Abyadh</h1>
+        <p class="lead">Software developer in opleiding · KW1C · Creatief en leergierig</p>
+        <a href="#projects" class="btn btn-primary btn-lg mt-3">Bekijk mijn projecten</a>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="container py-5">
+    <h2 class="section-title">Over mij</h2>
+    <p class="text-center mx-auto" style="max-width: 800px;">  <!--(Strakke UI) betekent een (clean)en overzichtelijke gebruikersinterface-->
+        Ik ben een gepassioneerde developer met een focus op strakke UI, responsive design en moderne webontwikkeling.
+        Ik studeer momenteel Software Development en streef ernaar om veilige en innovatieve websites te bouwen.
+        Ik vind het leuk om websites te maken die er netjes uitzien en goed werken op mobiel.
+
+    </p>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="bg-light py-5">
+    <div class="container">
+        <h2 class="section-title">Vaardigheden</h2>
+
+        <div class="mb-3">
+            <label class="skill-label">HTML</label>
+            <div class="progress" role="progressbar" aria-label="HTML" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 90%;">90%</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="skill-label">CSS</label>
+            <div class="progress" role="progressbar" aria-label="CSS" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 80%;">80%</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="skill-label">Bootstrap</label>
+            <div class="progress" role="progressbar" aria-label="Bootstrap" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 85%;">85%</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="skill-label">JavaScript</label>
+            <div class="progress" role="progressbar" aria-label="JavaScript" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 30%;">30%</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="container py-5">
+    <h2 class="section-title">Projecten</h2>
+
+    <div class="row g-4">
+          <!-- Project Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4">   <!--van me-->
+            <div class="card shadow-sm project-card">
+                 <img src="./fotos/2026-01-22 (5).png" class="card-img-top project-image" alt="Arduino-project">
+                <div class="card-body">
+                    <h5 class="card-title">Project Een</h5>
+                    <p class="card-text">Een heldere en interactieve Arduino-project gebouwd met C++ en Python.</p>
+                    <a href="./video/WhatsApp Video 2026-01-21 at 13.50.30.mp4" class="btn btn-primary mt-auto" target="_blank">Bekijk project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm project-card">
+                <img src="./fotos/WhatsApp Image 2026-01-21 at 14.02.25.jpeg" class="card-img-top project-image" alt="Websiteproject">
+                <div class="card-body">
+                    <h5 class="card-title">Project Twee</h5>
+                    <p class="card-text">Een statische website gemaakt met HTML, CSS en JavaScript.</p>
+                    <a href="./project2/project/index.htm" class="btn btn-primary mt-auto" target="_blank">Bekijk project</a>
+                </div>
+            </div>
+        </div>
+          <!-- Project Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm project-card">
+                <img src="./fotos/e65d6182-b8c8-4ff5-8f79-28d7ca5678cd.jpg" class="card-img-top project-image" alt="Portfolio- en landingspagina">
+                <div class="card-body">
+                    <h5 class="card-title">Project Drie</h5>
+                    <p class="card-text">Portfolio / Landingspagina volledig gebouwd met Bootstrap.</p>
+                    <a href="#" class="btn btn-primary mt-auto" target="_blank">Bekijk project</a>
+                </div>
+            </div>
+        </div>
+
+           <!-- Project Card 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm project-card">
+                <img src="./fotos/smokeless-tracker.png" class="card-img-top project-image project-logo" alt="Smokeless Tracker-logo">
+                <div class="card-body">
+                    <h5 class="card-title">Project Vier</h5>
+                    <p class="card-text">Smokeless-Tracker-webapp</p>
+                    <a href="https://munira-al-abyadh.github.io/Smokeless-Tracker/" class="btn btn-primary mt-auto" target="_blank">Bekijk project</a>
+                </div>
+            </div>
+        </div>
+
+         <!-- Project Card 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm project-card">
+                <img src="./fotos/project4.png" class="card-img-top project-image" alt="Screenshot van de boekingswebsite">
+                <div class="card-body">
+                    <h5 class="card-title">Project Vijf</h5>
+                    <p class="card-text">Boekingwebsite</p>
+                    <a href="https://boeking.infinityfreeapp.com/?i=1" class="btn btn-primary mt-auto" target="_blank">Bekijk project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Contact -->
+<section id="contact" class="bg-light py-5">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <form class="mx-auto contact-form" style="max-width: 600px;">
+            <input class="form-control mb-3" type="text" placeholder="Uw Naam">
+            <input class="form-control mb-3" type="email" placeholder="Uw E-mail">
+            <textarea class="form-control mb-3" rows="5" placeholder="Uw Bericht"></textarea>
+            <button class="btn btn-primary w-100">Verstuur bericht</button>
+        </form>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <p>&copy; 2026 Munira Al-Abyadh. Alle rechten voorbehouden.</p>
+</footer>
+
+<!--Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Mijn eigen script-->
+<script src="./java/main.js"></script>
+</body>
+</html>

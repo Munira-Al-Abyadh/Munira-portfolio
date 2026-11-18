@@ -1,0 +1,174 @@
+body 
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+header   /* heir heb ik een foto toegevogd als een achterground voor de header*/
+{
+    background-image: url("https://www.sint-michielsgestel.nl/sites/default/files/241106-1920-sintmichielsgestel-hero-banner-herfst.jpeg");
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+
+header nav ul  /* heir heb ik de style gemaakt voor de ul */
+{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0px;
+    margin: 0px;
+}
+
+section /* heir heb ik een design gemaakt voor voor al sections*/
+{
+    max-width: 900px;
+    margin: 40px auto; /*auto = laat de browser de linker- en rechtermarge automatisch berekenen*/
+    padding: 20px 30px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+section h1, h2 /* heir heb ik een style gemaakt voor al h1 en h2 in section*/
+{
+    margin-bottom: 15px;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+section p /* de kleur text van al p in de section */
+{
+    color: #333;
+}
+
+
+#about /* kleur voor een kant van de border*/
+{
+    border-left: 6px solid #007bff;
+}
+
+#information
+{
+    border-right: 6px solid #28a745;
+}
+
+#service
+{
+   border-left: 6px solid #ff9800; 
+}
+
+.menu-iteam /* een style voor al menu-iteams in de header */
+{
+    border: 2px solid white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    list-style: none;
+    text-align: center;
+}
+
+.menu-iteam a /* styling toe op alle <a> tags die zich binnen een element met de class .menu-iteam*/
+{
+    color:antiquewhite;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-iteam a:hover
+{
+    color: yellow;
+    border-radius: 5px;
+    padding: 5px 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contains  /* styling voor de footer section*/
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #004080;
+    color: white;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+
+.footer-section p
+{
+    margin: 5px 0;
+}
+
+.footer-section iframe 
+{
+    border-radius: 10px;
+}
+
+.vacatures-button  /*voor de solicitatie buttom in de footer*/
+{
+    background-color: #007bff;
+    color: antiquewhite;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.vacatures-button :hover 
+{
+    background-color: #0056b3;
+}
+
+
+
+/*css voor lunch*/
+#bodie
+{
+    margin: 0px;
+    padding: 0px;
+}
+#RES 
+{
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-group-of-people-eating-together-at-a-table-with-food-image_2948706.jpg");
+}
+.resturant1
+{
+    border-left: 10px solid #ff9800;
+}
+
+
+/*css voor sport*/
+#bdy
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#img-header
+{
+    background-image: url("https://www.zo34.nl/cms/upload/images/Sporten.jpg");
+}
+#but-
+{
+    border-left: 4px solid purple; /* hoe groeter de cijfer hoe deker de lijn*/ 
+}
+#lut
+{
+    border-right: 4px solid yellow;
+}
+
+/* style voor Tourism */
+#begroeting 
+{
+    text-align: center;
+    color: #0056b3;
+}
